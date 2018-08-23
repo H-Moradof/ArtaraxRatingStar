@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>ARTARAX Rating Star Demo</title>
+    <link rel="stylesheet" href="/artarax-rating-star/jquery.artarax.rating.star.css">
+</head>
+<body>
+    
+    <!-- data-id can be your ProductId -->
+    <div class="rating-star">
+        <span data-id="100" data-val="1"></span>
+        <span data-id="100" data-val="2"></span>
+        <span data-id="100" data-val="3"></span>
+        <span data-id="100" data-val="4"></span>
+        <span data-id="100" data-val="5"></span>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="/artarax-rating-star/jquery.artarax.rating.star.js"></script>
+    <script>
+    $(function () {
+
+        // ---------------------------- page.load() -------------------------
+        var artaraxRatingStar = $.artaraxRatingStar({
+            onClickCallBack: onRatingStar
+        });
+
+        function onRatingStar(rate, id) {
+            alert("data-val(rate)=" + rate + " data-id(ProductId)=" + id);
+        }
+
+    });
+    </script>
+</body>
+</html>

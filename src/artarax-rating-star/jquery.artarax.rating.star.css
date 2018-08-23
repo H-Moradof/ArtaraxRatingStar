@@ -1,0 +1,19 @@
+﻿.rating-star{
+    float:right;
+}
+.rating-star span{
+    width:30px;
+    height:30px;
+    display:block;
+    float:left;
+    background-image:url("/images/star-rate.png");
+    background-repeat:no-repeat;
+    background-size:100%;
+    margin:0px 2px;
+    cursor:pointer;
+    background-position:top;
+  }
+  
+  .rating-star span.clicked,.rating-star span.hover{
+    background-position:bottom;
+  }
